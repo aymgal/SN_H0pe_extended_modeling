@@ -66,28 +66,18 @@ Catalogs of all lensing constraints, i.e. the families of multiply-imaged backgr
 
 ## Usage
 
-The catalog files can be read with standard Python tools:
+The catalog files can be read with `numpy`:
 
 ```python
 import numpy as np
 
-# Read deflectors (point-like model)
-lenses = np.genfromtxt("catalogs/glee_model_g165_lenses_plt.txt",
-                       names=True, comments="#", dtype=None, encoding="utf-8")
+# Point-like model
+lenses_plt  = np.loadtxt("catalogs/glee_model_g165_lenses_plt.txt",  comments="#", dtype=str)
+sources_plt = np.loadtxt("catalogs/glee_model_g165_sources_plt.txt", comments="#", dtype=str)
 
-# Read lensing constraints (point-like model)
-sources = np.genfromtxt("catalogs/glee_model_g165_sources_plt.txt",
-                        names=True, comments="#", dtype=None, encoding="utf-8")
-```
-
-or with [astropy](https://www.astropy.org/):
-
-```python
-from astropy.io import ascii
-
-# Extended model variants
-lenses  = ascii.read("catalogs/glee_model_g165_lenses_ext.txt",  comment="#")
-sources = ascii.read("catalogs/glee_model_g165_sources_ext.txt", comment="#")
+# Extended model
+lenses_ext  = np.loadtxt("catalogs/glee_model_g165_lenses_ext.txt",  comments="#", dtype=str)
+sources_ext = np.loadtxt("catalogs/glee_model_g165_sources_ext.txt", comments="#", dtype=str)
 ```
 
 ## Citation
