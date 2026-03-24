@@ -1,0 +1,68 @@
+# Multiple-image family catalog for G165 (SGAS J105039.6+001730)
+# Cluster redshift: z = 0.351
+# Cluster center: RA = 162.665 deg, Dec = +0.292 deg (J2000)
+#
+# Used in the strong lensing models presented in:
+#   Galan et al. (2025), arXiv:2510.20561
+#
+# Column description:
+#   Family : Image family (system) number
+#   Image  : Image label (Family.N)
+#   RA     : Right ascension of the lensed image [degrees, J2000]
+#   Dec    : Declination of the lensed image [degrees, J2000]
+#   z_spec : Spectroscopic redshift of the source (-1 if not available)
+#   z_phot : Photometric redshift of the source (-1 if not available)
+#   Type   : Redshift measurement type (spectroscopic / photometric)
+#   Notes  : Additional notes (empty string if none)
+#
+# Notes:
+#   Family 1 corresponds to the SN H0pe host galaxy system (Quyllur arc)
+#   at z = 1.783, from which H0 was measured (see arXiv:2310.03075 and
+#   arXiv:2309.07491 for the SN discovery papers).
+#
+# Family  Image            RA           Dec   z_spec   z_phot           Type  Notes
+       1    1.1   162.6625000     0.2933667   1.7830  -1.0000  spectroscopic  SN H0pe host galaxy
+       1    1.2   162.6686667     0.2887000   1.7830  -1.0000  spectroscopic  SN H0pe host galaxy
+       1    1.3   162.6636666     0.2875333   1.7830  -1.0000  spectroscopic  SN H0pe host galaxy
+       1    1.4   162.6658333     0.2970333   1.7830  -1.0000  spectroscopic  SN H0pe counter-image
+       2    2.1   162.6586666     0.2947000   1.0083  -1.0000  spectroscopic  
+       2    2.2   162.6718334     0.2897000   1.0083  -1.0000  spectroscopic  
+       2    2.3   162.6670000     0.2990333   1.0083  -1.0000  spectroscopic  
+       3    3.1   162.6603333     0.2975333   1.2870  -1.0000  spectroscopic  
+       3    3.2   162.6733334     0.2882000   1.2870  -1.0000  spectroscopic  
+       3    3.3   162.6641667     0.2850333   1.2870  -1.0000  spectroscopic  
+       4    4.1   162.6705001     0.2963667  -1.0000   1.5500    photometric  
+       4    4.2   162.6576666     0.2902000  -1.0000   1.5500    photometric  
+       4    4.3   162.6680000     0.2837000  -1.0000   1.5700    photometric  
+       5    5.1   162.6615000     0.3003667   2.3720  -1.0000  spectroscopic  
+       5    5.2   162.6750001     0.2907000   2.3720  -1.0000  spectroscopic  
+       5    5.3   162.6653333     0.2825333   2.3720  -1.0000  spectroscopic  
+       6    6.1   162.6553332     0.2958667  -1.0000   0.9100    photometric  
+       6    6.2   162.6708334     0.2995333  -1.0000   0.8900    photometric  
+       6    6.3   162.6676667     0.2813667  -1.0000   0.9300    photometric  
+       7    7.1   162.6626666     0.3028667   1.8440  -1.0000  spectroscopic  
+       7    7.2   162.6766668     0.2930333   1.8440  -1.0000  spectroscopic  
+       7    7.3   162.6633333     0.2803667   1.8440  -1.0000  spectroscopic  
+       8    8.1   162.6725001     0.3013667  -1.0000   2.1000    photometric  
+       8    8.2   162.6543332     0.2970333  -1.0000   2.0800    photometric  
+       8    8.3   162.6690001     0.2797000  -1.0000   2.1200    photometric  
+       9    9.1   162.6586666     0.3043667   3.1710  -1.0000  spectroscopic  
+       9    9.2   162.6775002     0.2883667   3.1710  -1.0000  spectroscopic  
+       9    9.3   162.6663334     0.3047000   3.1710  -1.0000  spectroscopic  
+      10   10.1   162.6736668     0.3030333  -1.0000   1.7200    photometric  
+      10   10.2   162.6529998     0.2980333  -1.0000   1.7000    photometric  
+      10   10.3   162.6696667     0.2787000  -1.0000   1.7500    photometric  
+      11   11.1   162.6603333     0.3057000   2.6380  -1.0000  spectroscopic  
+      11   11.2   162.6783335     0.2867000   2.6380  -1.0000  spectroscopic  
+      11   11.3   162.6643333     0.2780333   2.6380  -1.0000  spectroscopic  
+      12   12.1   162.6746668     0.3042000  -1.0000   3.3500    photometric  
+      12   12.2   162.6519998     0.2992000  -1.0000   3.4000    photometric  
+      13   13.1   162.6616666     0.3067000   1.4820  -1.0000  spectroscopic  
+      13   13.2   162.6791669     0.2900333   1.4820  -1.0000  spectroscopic  
+      13   13.3   162.6670000     0.2770333   1.4820  -1.0000  spectroscopic  
+      14   14.1   162.6753335     0.3050333  -1.0000   2.8200    photometric  
+      14   14.2   162.6513332     0.3000333  -1.0000   2.7800    photometric  
+      14   14.3   162.6696667     0.2767000  -1.0000   2.8000    photometric  
+      15   15.1   162.6569999     0.3070333   1.9630  -1.0000  spectroscopic  
+      15   15.2   162.6796669     0.2908667   1.9630  -1.0000  spectroscopic  
+      15   15.3   162.6658333     0.2763667   1.9630  -1.0000  spectroscopic  
