@@ -19,39 +19,11 @@ These data products are published in:
 
 ### `catalogs/cluster_members_G165.txt`
 
-Catalog of cluster member galaxies used in the strong lensing model. Contains 130 members within ~3.5 arcmin of the cluster center, selected from HST/ACS (F814W) and HST/WFC3 (F160W) imaging.
-
-**Columns:**
-
-| Column | Description |
-|--------|-------------|
-| `ID` | Galaxy identifier |
-| `RA` | Right ascension [degrees, J2000] |
-| `Dec` | Declination [degrees, J2000] |
-| `z_spec` | Spectroscopic redshift (−1 if not available) |
-| `z_phot` | Photometric redshift (−1 if not available) |
-| `F814W` | HST/ACS F814W AB magnitude |
-| `F160W` | HST/WFC3 F160W AB magnitude |
-| `Type` | Redshift type: `BCG`, `spec`, or `phot` |
+Catalog of cluster member galaxies used in the strong lensing model.
 
 ### `catalogs/multiple_images_G165.txt`
 
-Catalog of multiply-imaged background sources (multiple-image families) used as constraints in the strong lensing model. Contains 45 images in 15 families, identified from JWST and HST imaging.
-
-**Columns:**
-
-| Column | Description |
-|--------|-------------|
-| `Family` | Image family (system) number |
-| `Image` | Image label (Family.N) |
-| `RA` | Right ascension of the lensed image [degrees, J2000] |
-| `Dec` | Declination of the lensed image [degrees, J2000] |
-| `z_spec` | Spectroscopic redshift of the source (−1 if not available) |
-| `z_phot` | Photometric redshift of the source (−1 if not available) |
-| `Type` | Redshift type: `spectroscopic` or `photometric` |
-| `Notes` | Additional notes |
-
-**Family 1** corresponds to the SN H0pe host galaxy system (the "Quyllur" arc) at z = 1.783. The supernova itself was discovered in three of the four images of this arc (see [arXiv:2310.03075](https://arxiv.org/abs/2310.03075) and [arXiv:2309.07491](https://arxiv.org/abs/2309.07491)).
+Catalog of multiply-imaged background sources (multiple-image families) used as constraints in the strong lensing model.
 
 ## Usage
 
