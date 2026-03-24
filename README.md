@@ -15,39 +15,69 @@ These data products are published in:
 | Approx. coordinates (J2000) | 11:27:15.164 +42:28:29.17 |
 | SN H0pe host galaxy | z = 1.78 |
 
+## Model variants
+
+Two lens model variants are provided, distinguished by their lensing constraints:
+
+- **`_plt` (point-like)**: Models built using only point-like lensing constraints across the full field of view.
+- **`_ext` (extended)**: Models built using the full surface-brightness extent of Arc 2 (the arc containing SN H0pe), in addition to point-like constraints elsewhere over the field of view.
+
 ## Contents
 
-### `catalogs/cluster_members_G165.txt`
+All catalogs are plain ASCII text files with `#`-prefixed header lines describing column names and units. They are generated directly from the [GLEE](https://www.astro.ucla.edu/~kcs/glee/) lens modeling configuration files.
 
-Catalog of cluster member galaxies used in the strong lensing model.
+### Deflector catalogs (`glee_model_g165_lenses_*.txt`)
 
-### `catalogs/multiple_images_G165.txt`
+Catalogs of all deflectors (mainly cluster member galaxies) included in the lens models. Each row corresponds to one deflector component. Columns:
 
-Catalog of multiply-imaged background sources (multiple-image families) used as constraints in the strong lensing model.
+| Column | Unit | Description |
+|--------|------|-------------|
+| `RA_IMG` | deg | Right ascension of the deflector (image plane) |
+| `DEC_IMG` | deg | Declination of the deflector (image plane) |
+| `RA_SRC` | deg | Right ascension in source plane (`nan` for deflectors) |
+| `DEC_SRC` | deg | Declination in source plane (`nan` for deflectors) |
+| `REDSHIFT` | — | Redshift of the deflector |
+| `REDSHIFT_PRIOR` | — | Prior type applied to the redshift |
+| `TYPE` | — | Component type (e.g. `lens`) |
+| `PROFILE` | — | Mass profile (e.g. `dpie` for dual pseudo-isothermal ellipsoid, `shear` for external shear) |
+| `LABEL` | — | Optional label |
+
+- `glee_model_g165_lenses_plt.txt` — 169 deflector components (point-like model)
+- `glee_model_g165_lenses_ext.txt` — 169 deflector components (extended model)
+
+### Source catalogs (`glee_model_g165_sources_*.txt`)
+
+Catalogs of all lensing constraints based on the GLEE configuration files, i.e. the families of multiply-imaged background sources used to optimize the lens models. Each row corresponds to one image of a background source. Columns:
+
+| Column | Unit | Description |
+|--------|------|-------------|
+| `RA_IMG` | deg | Right ascension of the image (image plane) |
+| `DEC_IMG` | deg | Declination of the image (image plane) |
+| `RA_SRC` | deg | Right ascension of the reconstructed source (source plane) |
+| `DEC_SRC` | deg | Declination of the reconstructed source (source plane) |
+| `REDSHIFT` | — | Redshift of the background source |
+| `REDSHIFT_PRIOR` | — | Prior type applied to the redshift (`exact`, `flat`, `link_*`) |
+| `TYPE` | — | Constraint type (e.g. `ptl_src` for point-like source) |
+| `PROFILE` | — | Source profile |
+| `LABEL` | — | Optional label (e.g. family identifier) |
+
+- `glee_model_g165_sources_plt.txt` — 106 image positions from 41 individual point-like sources (point-like constraints only)
+- `glee_model_g165_sources_ext.txt` — 84 image positions from 33 individual point-like sources (extended model; Arc 2 surface-brightness extent constraints are encoded separately in the GLEE configuration)
 
 ## Usage
 
-The catalog files are plain ASCII text files with `#`-prefixed comment lines. They can be read with standard tools:
+The catalog files can be read with `numpy`:
 
 ```python
 import numpy as np
 
-# Read cluster members
-members = np.genfromtxt("catalogs/cluster_members_G165.txt",
-                        names=True, comments="#", dtype=None, encoding="utf-8")
+# Point-like constraints only
+lenses_plt  = np.loadtxt("catalogs/glee_model_g165_lenses_plt.txt",  comments="#", dtype=str)
+sources_plt = np.loadtxt("catalogs/glee_model_g165_sources_plt.txt", comments="#", dtype=str)
 
-# Read multiple images
-images = np.genfromtxt("catalogs/multiple_images_G165.txt",
-                       names=True, comments="#", dtype=None, encoding="utf-8")
-```
-
-or with [astropy](https://www.astropy.org/):
-
-```python
-from astropy.io import ascii
-
-members = ascii.read("catalogs/cluster_members_G165.txt", comment="#")
-images  = ascii.read("catalogs/multiple_images_G165.txt",  comment="#")
+# Extended SN H0pe host + remaining point-like constraints
+lenses_ext  = np.loadtxt("catalogs/glee_model_g165_lenses_ext.txt",  comments="#", dtype=str)
+sources_ext = np.loadtxt("catalogs/glee_model_g165_sources_ext.txt", comments="#", dtype=str)
 ```
 
 ## Citation
