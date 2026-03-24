@@ -1,4 +1,4 @@
-# SN_H0pe_extended_modeling
+# Lens models of cluster PLCK G165.7+67.0 (SN H0pe host) using extended image constraints
 
 Catalogs of cluster members and multiple-image families used to build the strong lensing models of the galaxy cluster PLCK G165.7+67.0 (G165) hosting the gravitationally lensed supernova H0pe.
 
