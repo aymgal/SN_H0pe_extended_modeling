@@ -47,7 +47,7 @@ Catalogs of all deflectors (mainly cluster member galaxies) included in the lens
 
 ### Source catalogs (`glee_model_g165_sources_*.txt`)
 
-Catalogs of all lensing constraints, i.e. the families of multiply-imaged background sources used to optimize the lens models. Each row corresponds to one image of a background source. Columns:
+Catalogs of all lensing constraints based on the GLEE configuration files, i.e. the families of multiply-imaged background sources used to optimize the lens models. Each row corresponds to one image of a background source. Columns:
 
 | Column | Unit | Description |
 |--------|------|-------------|
@@ -71,11 +71,11 @@ The catalog files can be read with `numpy`:
 ```python
 import numpy as np
 
-# Point-like model
+# Point-like constraints only
 lenses_plt  = np.loadtxt("catalogs/glee_model_g165_lenses_plt.txt",  comments="#", dtype=str)
 sources_plt = np.loadtxt("catalogs/glee_model_g165_sources_plt.txt", comments="#", dtype=str)
 
-# Extended model
+# Extended SN H0pe host + remaining point-like constraints
 lenses_ext  = np.loadtxt("catalogs/glee_model_g165_lenses_ext.txt",  comments="#", dtype=str)
 sources_ext = np.loadtxt("catalogs/glee_model_g165_sources_ext.txt", comments="#", dtype=str)
 ```
