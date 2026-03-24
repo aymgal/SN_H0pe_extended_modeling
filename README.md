@@ -1,19 +1,19 @@
 # SN_H0pe_extended_modeling
 
-Catalogs of cluster members and multiple-image families used to build the strong lensing models of the galaxy cluster G165 (SGAS J105039.6+001730) hosting the gravitationally lensed supernova H0pe.
+Catalogs of cluster members and multiple-image families used to build the strong lensing models of the galaxy cluster PLCK G165.7+67.0 (G165) hosting the gravitationally lensed supernova H0pe.
 
 These data products are published in:
 
-> Galan et al. (2025), *Extended strong lensing model of G165 with SN H0pe*, [arXiv:2510.20561](https://arxiv.org/abs/2510.20561)
+> Galan et al. (2025), *Strong lensing model and dust extinction maps of the host galaxy of type Ia supernova H0pe*, [arXiv:2510.20561](https://arxiv.org/abs/2510.20561)
 
 ## Cluster overview
 
 | Property | Value |
 |----------|-------|
-| Cluster name | G165 (SGAS J105039.6+001730) |
-| Cluster redshift | z = 0.351 |
-| Cluster center (J2000) | RA = 162.665°, Dec = +0.292° |
-| SN H0pe host galaxy | z = 1.783 |
+| Cluster name | PLCK G165.7+67.0 (G165) |
+| Cluster redshift | z = 0.348 |
+| Approx. coordinates (J2000) | 11:27:15.164 +42:28:29.17 |
+| SN H0pe host galaxy | z = 1.78 |
 
 ## Model variants
 
